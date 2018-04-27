@@ -64,16 +64,16 @@ draw_set_color(c_black)
 
 
 if keyboard_check(ord("D")) {
-	pscale = 1
 	pxOffset = -10;
 	pick_rotate *= 1
 }
 if keyboard_check(ord("A")) {
-	pscale = -1;
+
 	pxOffset = 10;
 }
 
 if global.item_data[# global.inventory[# global.inventorySlot, 0],4] == "Pickaxe" {
-	draw_sprite_ext(sItemInventory,global.item_data[# global.inventory[# global.inventorySlot, 0],0],x+pxOffset,y-16,pscale,1,pick_rotate,c_white,1)
+	sprite_set_offset(sItemInventory,9,23)
+	draw_sprite_ext(sItemInventory,global.item_data[# global.inventory[# global.inventorySlot, 0],0],x+pxOffset,y-16,x_scale_ * flipped,1,pick_rotate,c_white,1)
 	
-}
+} else sprite_set_offset(sItemInventory,0,0)

@@ -22,6 +22,6 @@ if !position_meeting(mouse_x,mouse_y,oCollison) && global.item_data[# global.inv
 
 if global.item_data[# global.inventory[# global.inventorySlot, 0],4] == "Pickaxe" && rotate_pick == false{
 	rotate_pick = true;
-	if pscale == 1 pix_rotate = -5;
-	if pscale == -1 pix_rotate = 5;
+	if x_scale_ * flipped == 1 pix_rotate = -5;
+	if x_scale_ * flipped == -1 pix_rotate = 5;
 }
