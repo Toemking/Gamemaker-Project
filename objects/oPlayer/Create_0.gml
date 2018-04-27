@@ -96,7 +96,7 @@ spearThrust = 0
 swordThrust = 0
 
 
-pscale = 0;
+
 pxOffset = 0;
 pick_rotate = 0;
 pix_rotate = 0
