@@ -96,6 +96,25 @@
             }
         },
         {
+            "Key": "053cfb15-5126-4690-be71-fcdc2d14b4fb",
+            "Value": {
+                "id": "73920346-2fe6-4b06-9c4d-5fc15b10e702",
+                "modelName": "GMResourceInfo",
+                "mvc": "1.0",
+                "configDeltaFiles": [
+                    
+                ],
+                "configDeltas": [
+                    
+                ],
+                "resourceCreationConfigs": [
+                    "default"
+                ],
+                "resourcePath": "objects\/oPickaxeCollisons\/oPickaxeCollisons.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "05b7ab72-7960-43ce-be1e-4eafe9f46dc5",
             "Value": {
                 "id": "b4032ee9-0bbd-4a14-92aa-11ab3f0c5b2c",
