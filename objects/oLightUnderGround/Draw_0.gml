@@ -11,7 +11,7 @@ with(oSky)
 with(oSkyBlock)
 {
 	gpu_set_blendmode(bm_src_color)
-	draw_sprite_ext(sSquareLight,0,x*other.surfScale,(y*other.surfScale), lightSize*other.surfScale, lightSize*other.surfScale, 0, c_white, lightStrength-global.daylight)
+	draw_sprite_ext(sSquareLight,0,x*other.surfScale,(y*other.surfScale), lightSize*other.surfScale, lightSize*other.surfScale, 0, c_white, lightStrength)
 	gpu_set_blendmode(bm_normal)
 }
 with(oUnderGroundLightSquare)
