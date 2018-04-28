@@ -1,5 +1,5 @@
 randomize()
-p = 82; //Height to gen
+p = 41; //Height to gen
 v = 2; //Increase height to generate
 a = -1; //Decrease v by one
 t = 1 //The chance out of ten to create a tree
@@ -7,36 +7,36 @@ g = 1 //Chance out of 50 to make a gold vein appear
 c = 100 //Chance for cave to occur
 ;
 
-for(i=0; i<room_width; i+=16) {
+for(i=0; i<room_width; i+=32) {
 	var n = 0;
-		for(j = 90 - p; j != 0; j--)
+		for(j = 45 - p; j != 0; j--)
 		{
-			//instance_create_depth(i,544+n,-100,oSkyBlock)
-			n += 16
+			instance_create_depth(i,544+n,-100,oSkyBlock)
+			n += 32
 		}
-		var create_grass = instance_create_depth(i,room_height-(p*16),0,oCollison)
+		var create_grass = instance_create_depth(i,room_height-(p*32),0,oCollison)
 		create_grass.image_index = 2;
 		create_grass.original = true;
 		//instance_create_depth(i,room_height-(p*32),0,oSkyBlock)
 		if t == round(random_range(1,20)) {
-			instance_create_depth(i,room_height-(p*16),0,oTree)
+			instance_create_depth(i,room_height-(p*32),0,oTree)
 	}
-	for(m=room_height-((p-1)*16);m<room_height; m+= 16) {
-			if m == room_height-((p-1)*16)+32 {
+	for(m=room_height-((p-1)*32);m<room_height; m+= 32) {
+			if m == room_height-((p-1)*32)+64 {
 				var create_dirt = instance_create_depth(i,m,0, oCollison)
 				create_dirt.image_index = 1;
 				create_dirt.original = true;
-			} else if m<room_height-((p-4)*16) {
+			} else if m<room_height-((p-4)*32) {
 				var create_dirt = instance_create_depth(i,m,0, oCollison)
 				create_dirt.image_index = 1;
 				create_dirt.original = true;
 			}
 	
 	}
-	//instance_create_depth(i,room_height-((p-1)*16)+(16*3),0, oUnderGroundLightSquare)
-	//instance_create_depth(i,room_height-((p-1)*16)+(16*4),0, oUnderGroundLightSquare)
-	//instance_create_depth(i,room_height-((p-1)*16)+(16*5),0, oUnderGroundLightSquare)
-	for(b=room_height-((p-4)*16);b<room_height-16; b+= 16) {
+	instance_create_depth(i,room_height-((p-1)*32)+(32*3),0, oUnderGroundLightSquare)
+	instance_create_depth(i,room_height-((p-1)*32)+(32*4),0, oUnderGroundLightSquare)
+	instance_create_depth(i,room_height-((p-1)*32)+(32*5),0, oUnderGroundLightSquare)
+	for(b=room_height-((p-4)*32);b<room_height-32; b+= 32) {
 		if g == round(random_range(1,10)) && b > 1250 {
 			ore_vein(7,6)	
 		}
@@ -57,8 +57,8 @@ for(i=0; i<room_width; i+=16) {
 	v+=a
 	p+=v
 	a=choose(-1,-1,0,0,0,0,0,0,1,2)
-	if p >80 {p=80 v= 0 a =-abs(a)}
-	if p <70  {p=70 v= 0 a = abs(a)}
+	if p >40 {p=40 v= 0 a =-abs(a)}
+	if p <35  {p=35 v= 0 a = abs(a)}
 	
 	
 	
